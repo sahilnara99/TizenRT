@@ -61,7 +61,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 
-#include <json/cJSON.h>
+#include <cJSON.h>
 
 typedef struct {
     const unsigned char *json;

@@ -66,10 +66,10 @@ USERLIBS =
 # both the kernel- and user-space builds.  For now, the memory manager (mm)
 # is placed in user space (only).
 
-TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libstubs$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libkc$(LIBEXT)
+TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libstubs$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libkc$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libkjson$(LIBEXT)
 TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libkmm$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libkarch$(LIBEXT)
 TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libkwque$(LIBEXT)
-USERLIBS  += $(LIBRARIES_DIR)$(DELIM)libproxies$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libuc$(LIBEXT)
+USERLIBS  += $(LIBRARIES_DIR)$(DELIM)libproxies$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libuc$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libujson$(LIBEXT)
 USERLIBS  += $(LIBRARIES_DIR)$(DELIM)libumm$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libuarch$(LIBEXT)
 USERLIBS  += $(LIBRARIES_DIR)$(DELIM)libuwque$(LIBEXT)
 

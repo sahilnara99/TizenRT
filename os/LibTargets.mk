@@ -63,6 +63,12 @@ libc$(DELIM)libkc$(LIBEXT): context
 $(LIBRARIES_DIR)$(DELIM)libkc$(LIBEXT): libc$(DELIM)libkc$(LIBEXT)
 	$(Q) install $(LIB_DIR)$(DELIM)libc$(DELIM)libkc$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libkc$(LIBEXT)
 
+# json$(DELIM)libkjson$(LIBEXT): context
+# 	$(Q) $(MAKE) -C $(LIB_DIR)$(DELIM)json TOPDIR="$(TOPDIR)" libkjson$(LIBEXT) KERNEL=y EXTRADEFINES=$(KDEFINE) BIN=libkjson$(LIBEXT) BINDIR=kbin
+
+# $(LIBRARIES_DIR)$(DELIM)libkjson$(LIBEXT): json$(DELIM)libkjson$(LIBEXT)
+# 	$(Q) install $(LIB_DIR)$(DELIM)json$(DELIM)libkjson$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libkjson$(LIBEXT)
+
 mm$(DELIM)libkmm$(LIBEXT): context
 	$(Q) $(MAKE) -C mm TOPDIR="$(TOPDIR)" libkmm$(LIBEXT) KERNEL=y EXTRADEFINES=$(KDEFINE) BIN=libkmm$(LIBEXT) BINDIR=kbin
 
@@ -165,6 +171,12 @@ libc$(DELIM)libuc$(LIBEXT): context
 $(LIBRARIES_DIR)$(DELIM)libuc$(LIBEXT): libc$(DELIM)libuc$(LIBEXT)
 	$(Q) install $(LIB_DIR)$(DELIM)libc$(DELIM)libuc$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libuc$(LIBEXT)
 
+json$(DELIM)libujson$(LIBEXT): context
+	$(Q) $(MAKE) -C $(LIB_DIR)$(DELIM)json TOPDIR="$(TOPDIR)" libujson$(LIBEXT) KERNEL=n BIN=libujson$(LIBEXT) BINDIR=ubin
+
+$(LIBRARIES_DIR)$(DELIM)libujson$(LIBEXT): json$(DELIM)libujson$(LIBEXT)
+	$(Q) install $(LIB_DIR)$(DELIM)json$(DELIM)libujson$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libujson$(LIBEXT)
+
 mm$(DELIM)libumm$(LIBEXT): context
 	$(Q) $(MAKE) -C mm TOPDIR="$(TOPDIR)" libumm$(LIBEXT) KERNEL=n BIN=libumm$(LIBEXT) BINDIR=ubin
 
@@ -255,6 +267,12 @@ libc$(DELIM)libc$(LIBEXT): context
 
 $(LIBRARIES_DIR)$(DELIM)libc$(LIBEXT): libc$(DELIM)libc$(LIBEXT)
 	$(Q) install $(LIB_DIR)$(DELIM)libc$(DELIM)libc$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)libc$(LIBEXT)
+
+json$(DELIM)json$(LIBEXT): context
+	$(Q) $(MAKE) -C $(LIB_DIR)$(DELIM)json TOPDIR="$(TOPDIR)" json$(LIBEXT)
+
+$(LIBRARIES_DIR)$(DELIM)json$(LIBEXT): json$(DELIM)json$(LIBEXT)
+	$(Q) install $(LIB_DIR)$(DELIM)json$(DELIM)json$(LIBEXT) $(LIBRARIES_DIR)$(DELIM)json$(LIBEXT)
 
 mm$(DELIM)libmm$(LIBEXT): context
 	$(Q) $(MAKE) -C mm TOPDIR="$(TOPDIR)" libmm$(LIBEXT)
